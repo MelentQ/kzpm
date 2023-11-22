@@ -1,0 +1,148 @@
+.page-footer {
+  padding: 7.8rem 0 4.4rem;
+
+  color: white;
+
+  background-color: #6e51c5;
+
+  @include breakpoint(tablet) {
+    padding: 1.4rem 0 2.8rem;
+  }
+
+  ::selection {
+    color: var(--text-color);
+
+    background-color: white;
+    -webkit-text-fill-color: var(--text-color);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+
+    &:not(:last-child) {
+      margin-bottom: 17rem;
+    }
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__grid-item {
+    &_mobile-wide {
+      @include breakpoint(tablet) {
+        grid-column: span 2;
+      }
+    }
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 6.4rem;
+    }
+
+    @include breakpoint(tablet) {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.6rem;
+
+    font-weight: 400;
+    font-size: var(--fs-small);
+
+    opacity: 0.4;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    font-size: var(--fs-h2);
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__copyright {
+    display: block;
+    margin-bottom: 0.8rem;
+
+    font-size: var(--fs-small);
+
+    opacity: 0.4;
+  }
+
+  &__policy {
+
+  }
+
+  &__presentation {
+  }
+
+  &__made-by-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+
+    @include breakpoint(tablet) {
+      align-items: flex-end;
+    }
+  }
+
+  &__made-by {
+    span {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+
+        width: 4.8rem;
+        height: 1.1rem;
+
+        background-image: url("../img/mw.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        transform: translateX(-50%);
+
+        content: '';
+
+        @include breakpoint(tablet) {
+          width: 1.9rem;
+          height: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+.footer-menu {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+  }
+
+  &__item {
+    font-size: var(--fs-h2);
+  }
+}

@@ -10,6 +10,7 @@ import accordions from './accordions';
 import modals from './modals';
 import tabs from './tabs';
 import menu from './menu';
+import headerSlider from './headerSlider';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   modals();
   tabs();
   menu();
+
+  // custom js
+  headerSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

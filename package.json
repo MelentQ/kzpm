@@ -3,11 +3,19 @@
   "version": "1.0.0",
   "description": "kzpm.com frontend",
   "keywords": [],
+  "homepage": "https://github.com/MelentQ/kzpm#readme",
+  "bugs": {
+    "url": "https://github.com/MelentQ/kzpm/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MelentQ/kzpm.git"
+  },
   "license": "MIT",
   "author": "MelentQ",
   "main": "main.js",
   "scripts": {
-    "build": "gulp build-production",
+    "build": "gulp build-production --mode production",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "gulp build && gulp serve"
@@ -33,7 +41,7 @@
     "lodash": "^4.17.21",
     "parsleyjs": "^2.9.2",
     "plyr": "^3.6.8",
-    "swiper": "^8.1.4"
+    "swiper": "^11.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -54,9 +62,11 @@
     "gulp-debug": "^4.0.0",
     "gulp-hb": "^8.0.0",
     "gulp-html-beautify": "^1.0.1",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-newer": "^1.4.0",
     "gulp-plumber": "^1.2.1",
     "gulp-prettier": "^2.1.0",
+    "gulp-pretty-html": "^2.0.10",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",

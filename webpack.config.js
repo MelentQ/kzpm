@@ -1,12 +1,12 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   entry: {
-    app: './src/js/main.js'
+    app: './src/js/main.js',
   },
   output: {
     path: path.resolve(__dirname, './build/js'),
-    filename: '[name].js'
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -14,17 +14,17 @@ module.exports = {
         test: /\.js$/,
         exclude: [/node_modules(?![/|\\](dom7|swiper))/],
         use: {
-          loader: 'babel-loader'
-        }
-      }
-    ]
+          loader: 'babel-loader',
+        },
+      },
+    ],
   },
   devtool: 'eval-source-map',
   optimization: {
     usedExports: true,
   },
-  mode: 'development',
+  mode: process.env.MODE || 'development',
   externals: {
-    jquery: 'jQuery'
-  }
-}
+    jquery: 'jQuery',
+  },
+};

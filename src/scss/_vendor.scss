@@ -10,6 +10,8 @@
     flex-direction: column;
     box-sizing: border-box;
     height: auto;
+
+    user-select: none;
 }
 
 .lazyload,

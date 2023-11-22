@@ -1,5 +1,33 @@
 <header class="page-header">
-    <div class="container">
-        <h2>Header</h2>
+  <div class="container">
+    <div class='page-header__top'>
+      <div class='page-header__top-title'>
+        Открываем новые возможности полимеров с <span>заботой об</span> <span>окружающем мире</span>
+      </div>
+      <div class='page-header__top-slider-wrapper'>
+        <div class='page-header__top-slider swiper js-header-slider'>
+          <ul class='page-header__top-slider-list swiper-wrapper'>
+            {{# each header-slider }}
+              <li class='page-header__top-slider-item-wrapper swiper-slide'>
+                <div class='page-header__top-slider-item'>
+                  <div class='page-header__top-slider-item-content'>
+                    <h3 class='page-header__top-slider-item-title'>20 лет Камскому заводу полимерных материалов.</h3>
+                    <div class='page-header__top-slider-item-description'>Поздравляем коллег и партнеров!</div>
+                  </div>
+                  <div class='page-header__top-slider-item-image'>
+                    {{> shared/image src="img/header-slider/1.jpg"}}
+                  </div>
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+          <div class='page-header__top-slider-controls'>
+            <button class='page-header__top-slider-navigation page-header__top-slider-navigation-prev'>←</button>
+            <div class='page-header__top-slider-pagination'></div>
+            <button class='page-header__top-slider-navigation page-header__top-slider-navigation-next'>→</button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </header>
