@@ -1,0 +1,203 @@
+@mixin no-highlight() {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@mixin visually-hidden() {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
+}
+
+@mixin placeholder {
+    &::placeholder {
+        @content;
+    }
+}
+
+@mixin fullpage-bg {
+    position: relative;
+
+    background: none;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc((100vw - 100% - var(--sb-width, 0)) / 2 * -1);
+        z-index: -1;
+
+        width: 100vw;
+
+        content: '';
+        @content;
+    }
+}
+
+@mixin no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar * {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+}
+
+@mixin custom-scrollbar {
+    scrollbar-color: var(--primary-color) white;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 0.6rem;
+
+        background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--primary-color);
+    }
+
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: white;
+    }
+}
+
+@mixin mobile-horizontal-scroll {
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: calc(-1 * var(--content-padding));
+    margin-left: calc(-1 * var(--content-padding));
+    padding-right: var(--content-padding);
+    padding-left: var(--content-padding);
+    overflow-y: hidden;
+
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+
+    & > * {
+        flex-shrink: 0;
+    }
+
+    &::after {
+        flex-shrink: 0;
+        width: var(--content-padding);
+        height: 1px;
+
+        content: '';
+    }
+}
+
+@mixin centered-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+@mixin hidden-by-default {
+    visibility: hidden;
+    opacity: 0;
+
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    &.active {
+        visibility: inherit;
+        opacity: 1;
+
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+}
+
+@mixin breakpoint($class) {
+    @if $class == large-desktop {
+        @media only screen and (max-width: (1600px)) {
+            @content;
+        }
+    } @else if $class == desktop {
+        @media only screen and (max-width: (1400px)) {
+            @content;
+        }
+    } @else if $class == laptop {
+        @media only screen and (max-width: (1200px)) {
+            @content;
+        }
+    } @else if $class == tablet {
+        @media only screen and (max-width: (1024px)) {
+            @content;
+        }
+    } @else if $class == small-tablet {
+        @media only screen and (max-width: (768px)) {
+            @content;
+        }
+    } @else if $class == mobile {
+        @media only screen and (max-width: (640px)) {
+            @content;
+        }
+    } @else if $class == small-mobile {
+        @media only screen and (max-width: (576px)) {
+            @content;
+        }
+    } @else if $class == supersmall-mobile {
+        @media only screen and (max-width: (370px)) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint-mf($class) {
+    @if $class == large-desktop {
+        @media only screen and (min-width: 1401px) {
+            @content;
+        }
+    } @else if $class == desktop {
+        @media only screen and (min-width: 1201px) {
+            @content;
+        }
+    } @else if $class == laptop {
+        @media only screen and (min-width: 1025px) {
+            @content;
+        }
+    } @else if $class == tablet {
+        @media only screen and (min-width: 769px) {
+            @content;
+        }
+    } @else if $class == small-tablet {
+        @media only screen and (min-width: 641px) {
+            @content;
+        }
+    } @else if $class == mobile {
+        @media only screen and (min-width: 577px) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-config-rational-order/plugin"
+  ],
+  "rules": {
+    "color-hex-case": "lower",
+    "declaration-empty-line-before": null,
+    "selector-class-pattern": null,
+    "property-no-vendor-prefix": null,
+    "media-feature-range-notation": null,
+    "plugin/rational-order": [
+      true,
+      {
+        "empty-line-between-groups": true
+      }
+    ]
+  },
+  "ignoreFiles": [
+    "build/*",
+    "node_modules/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "views/**/*.hbs"
+      ],
+      "customSyntax": "postcss-html",
+      "extends": [
+        "stylelint-config-html"
+      ]
+    }
+  ]
+}
