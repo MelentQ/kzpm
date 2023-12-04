@@ -1,0 +1,25 @@
+.section-link-block {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6.2rem;
+  padding-right: 18.5rem;
+
+  @include breakpoint(tablet) {
+    margin-top: 3.2rem;
+    padding-right: 0;
+  }
+}
+
+.section-link {
+  display: block;
+  margin-left: auto;
+
+  font-size: 4.4rem;
+  font-style: italic;
+
+  @include breakpoint(tablet) {
+    max-width: 20rem;
+
+    font-size: 2rem;
+  }
+}

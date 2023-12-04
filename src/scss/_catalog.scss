@@ -1,0 +1,40 @@
+.catalog {
+  &__inner {
+    padding: 16rem 0 18rem;
+
+    @include breakpoint(tablet) {
+      padding: 3.2rem 0 6.5rem;
+    }
+  }
+
+  &__title {
+    max-width: 172rem;
+    margin-bottom: 13rem;
+
+    font-weight: 400;
+    font-size: var(--fs-h1);
+
+    b {
+      color: #6e51c5;
+      font-weight: 400;
+    }
+
+    @include breakpoint(tablet) {
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+    }
+  }
+
+  &__item {
+  }
+}

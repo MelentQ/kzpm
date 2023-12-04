@@ -11,6 +11,7 @@ import modals from './modals';
 import tabs from './tabs';
 import menu from './menu';
 import headerSlider from './headerSlider';
+import smoothScroll from './smoothScroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // custom js
   headerSlider();
+  smoothScroll();
 });
 
 document.addEventListener('lazyloaded', () => {

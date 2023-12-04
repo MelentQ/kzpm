@@ -1,9 +1,53 @@
 {{#extend "layout"}}
   {{#content "main"}}
 
-    <section class="home">
-      <div class="container">
+    <section class="intro">
+      <div class='intro__bg'>
+        <!-- todo: Заменить на <video> -->
+        <img class='lazyload intro__bg-media' data-src='img/bg.jpg' alt='Intro BG'>
+      </div>
 
+      <div class='intro__bottom'>
+        <div class="container">
+          <ul class='intro__controls'>
+            <li class='intro__control active'>
+              <div class='intro__control-info'>
+                <h3 class='intro__control-title'>Полимерные пленки</h3>
+                <p class='intro__control-description'>Многослойная полиэтиленовая пленка</p>
+              </div>
+              <div class='intro__control-image'>
+                {{> shared/image src="img/intro/preview-1.jpg"}}
+              </div>
+            </li>
+            <li class='intro__control'>
+              <div class='intro__control-info'>
+                <h3 class='intro__control-title'>Полимерные пленки</h3>
+                <p class='intro__control-description'>Многослойная полиэтиленовая пленка</p>
+              </div>
+              <div class='intro__control-image'>
+                {{> shared/image src="img/intro/preview-2.jpg"}}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class='catalog'>
+      <div class='container'>
+        <div class='catalog__inner'>
+          <h2 class='catalog__title'>Надежные решения в <b>гибкой полимерной упаковке</b></h2>
+
+          <ul class='catalog__list'>
+            {{#each catalogItems}}
+              <li class='catalog__item'>
+                {{> catalog-item props=this}}
+              </li>
+            {{/each}}
+          </ul>
+
+          {{>section-link text="Смотреть все товары (52)"}}
+        </div>
       </div>
     </section>
 
