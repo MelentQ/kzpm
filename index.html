@@ -12,8 +12,15 @@
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             <?xml version="1.0" encoding="utf-8"?>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <symbol fill="none" viewBox="0 0 69 85" id="catalog-1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.62 82.548a6.5 6.5 0 01-6.5-6.5V36c0-12.426 10.073-22.5 22.5-22.5h23.949a6.5 6.5 0 016.5 6.5v40.048c0 12.427-10.074 22.5-22.5 22.5h-23.95z" />
+                    <path d="M.75 24c0-1.03.067-2.044.197-3.038l-.744-.097a23.836 23.836 0 011.618-6.052l.693.287a23.225 23.225 0 013.04-5.254l-.596-.457A24.142 24.142 0 019.39 4.96l.457.594a23.224 23.224 0 015.254-3.04l-.287-.692A23.836 23.836 0 0120.865.203l.097.744C21.956.817 22.97.75 24 .75h2.994V0h5.987v.75h5.987V0h5.988v.75h2.993a7.23 7.23 0 012.776.55l.287-.693a8.028 8.028 0 014.33 4.33l-.692.288c.354.854.55 1.79.55 2.775v3.337h.75v6.675h-.75v6.675h.75v6.674h-.75v6.675h.75v6.675h-.75v3.337c0 1.03-.067 2.044-.197 3.038l.744.097a23.84 23.84 0 01-1.619 6.052l-.692-.287a23.226 23.226 0 01-3.04 5.254l.595.457a24.146 24.146 0 01-4.43 4.43l-.458-.594a23.226 23.226 0 01-5.254 3.04l.287.692a23.835 23.835 0 01-6.052 1.618l-.097-.743c-.994.13-2.008.196-3.038.196h-2.993v.75h-5.988v-.75h-5.987v.75h-5.987v-.75H8a7.227 7.227 0 01-2.775-.55l-.287.693a8.028 8.028 0 01-4.331-4.33l.693-.288a7.226 7.226 0 01-.55-2.775v-3.337H0v-6.675h.75v-6.675H0v-6.674h.75v-6.675H0v-6.675h.75V24z" />
+                </symbol>
                 <symbol viewBox="0 0 11 19" id="fb" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.06 6.38V4.51c0-.84.19-1.26 1.49-1.26h1.64V.13H7.46C4.11.13 3 1.66 3 4.29v2.09H.81V9.5H3v9.38h4.06V9.5h2.76l.37-3.12z" />
+                </symbol>
+                <symbol viewBox="0 0 25 25" id="lang" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M2.322 11.43H7.5a17.106 17.106 0 013.033-9.005 9.91 9.91 0 00-8.21 9.004zM7.5 12.952H2.322a9.91 9.91 0 008.21 9.002A17.109 17.109 0 017.5 12.953zm1.526 0h6.326a15.586 15.586 0 01-3.163 8.689 15.586 15.586 0 01-3.163-8.689zm6.326-1.524H9.024a15.586 15.586 0 013.164-8.69 15.587 15.587 0 013.163 8.69zm1.525 1.524a17.11 17.11 0 01-3.036 9.006 9.91 9.91 0 008.234-9.006h-5.198zm5.198-1.524h-5.198a17.109 17.109 0 00-3.036-9.008 9.91 9.91 0 018.234 9.008zM12.198.761C5.886.761.77 5.878.77 12.19s5.116 11.429 11.428 11.429c6.312 0 11.429-5.117 11.429-11.429S18.51.761 12.198.761z" clip-rule="evenodd" />
                 </symbol>
                 <symbol viewBox="0 0 14 20" id="ok" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12.83 10.74c-.28-.57-1.07-1.05-2.12-.24A6.84 6.84 0 017 11.64a6.84 6.84 0 01-3.71-1.14c-1-.81-1.84-.33-2.12.24-.5 1 .06 1.49 1.33 2.3A8.54 8.54 0 006 14.1l-.8.8-.03.1C4.06 16.07 3 17.14 2.25 17.88a1.14 1.14 0 000 1.62l.14.16a1.16 1.16 0 001.64 0l3-3c1.15 1.13 2.24 2.22 3 3a1.16 1.16 0 001.64 0l.13-.16a1.12 1.12 0 000-1.62l-3-3-.8-.79A8.35 8.35 0 0011.5 13c1.27-.77 1.83-1.26 1.33-2.26z" />
@@ -32,7 +39,7 @@
             <header class="page-header">
                 <div class="container">
                     <div class="page-header__top">
-                        <div class="page-header__top-title">Открываем новые возможности полимеров с<span>заботой об</span>
+                        <div class="page-header__top-title">Открываем новые возможности полимеров<span>с заботой об</span>
                             <span>окружающем мире</span>
                         </div>
                         <div class="page-header__top-slider-wrapper">
@@ -95,8 +102,174 @@
             </header>
 
             <main class="page-main">
-                <section class="home">
-                    <div class="container"></div>
+                <section class="intro">
+                    <div class="intro__bg">
+                        <img class="lazyload intro__bg-media" data-src="img/bg.jpg" alt="Intro BG">
+                    </div>
+                    <div class="intro__bottom">
+                        <div class="container">
+                            <ul class="intro__controls">
+                                <li class="intro__control active">
+                                    <div class="intro__control-info">
+                                        <h3 class="intro__control-title">Полимерные пленки</h3>
+                                        <p class="intro__control-description">Многослойная полиэтиленовая пленка</p>
+                                    </div>
+                                    <div class="intro__control-image">
+                                        <img class="lazyload" data-src="img/intro/preview-1.jpg" alt="Image">
+                                    </div>
+                                </li>
+                                <li class="intro__control">
+                                    <div class="intro__control-info">
+                                        <h3 class="intro__control-title">Полимерные пленки</h3>
+                                        <p class="intro__control-description">Многослойная полиэтиленовая пленка</p>
+                                    </div>
+                                    <div class="intro__control-image">
+                                        <img class="lazyload" data-src="img/intro/preview-2.jpg" alt="Image">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="catalog">
+                    <div class="container">
+                        <div class="catalog__inner">
+                            <h2 class="catalog__title">Надежные решения в<b>гибкой полимерной упаковке</b>
+                            </h2>
+                            <ul class="catalog__list">
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">6 позиций</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Пищевая промышленность</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">8 позиций</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Химия и нефтехимия</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">4 позиции</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Строительство</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">4 позиции</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Логистика</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">8 позиций</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Удобрения и торфогрунт</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">4 позиции</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Агросектор</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">6 позиций</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Бытовая техника</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">8 позиций</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Шинная промышленность</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">4 позиции</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Обработка дерева</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                                <li class="catalog__item">
+                                    <div class="catalog-item">
+                                        <div class="catalog-item__icon">
+                                            <svg>
+                                                <use xlink:href="#catalog-1" />
+                                            </svg>
+                                        </div>
+                                        <span class="catalog-item__label">4 позиции</span>
+                                        <h3 class="catalog-item__name">
+                                            <a href="#">Обработка металла</a>
+                                        </h3>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
             </main>
 
